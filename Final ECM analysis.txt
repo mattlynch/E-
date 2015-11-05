@@ -14395,6 +14395,16 @@ Branch,
     Passive;                 !- Component 1 Branch Control Type
 
 Branch,
+    Chilled Water Loop Supply Branch 4,  !- Name
+    ,                        !- Maximum Flow Rate {m3/s}
+    ,                        !- Pressure Drop Curve Name
+    Chiller:Electric:EIR,    !- Component 1 Object Type
+    Chiller Electric EIR 5,    !- Component 1 Name
+    Node 300,                !- Component 1 Inlet Node Name
+    Node 301,                !- Component 1 Outlet Node Name
+    Passive;                 !- Component 1 Branch Control Type
+
+Branch,
     Chilled Water Loop Supply Outlet Branch,  !- Name
     ,                        !- Maximum Flow Rate {m3/s}
     ,                        !- Pressure Drop Curve Name
@@ -14612,6 +14622,16 @@ Branch,
     Chiller Electric EIR 1,  !- Component 1 Name
     Node 72,                 !- Component 1 Inlet Node Name
     Node 78,                 !- Component 1 Outlet Node Name
+    Passive;                 !- Component 1 Branch Control Type
+
+Branch,
+    Condenser Water Loop Demand Branch 3,  !- Name
+    ,                        !- Maximum Flow Rate {m3/s}
+    ,                        !- Pressure Drop Curve Name
+    Chiller:Electric:EIR,    !- Component 1 Object Type
+    Chiller Electric EIR 5,  !- Component 1 Name
+    Node 303,                 !- Component 1 Inlet Node Name
+    Node 304,                 !- Component 1 Outlet Node Name
     Passive;                 !- Component 1 Branch Control Type
 
 Branch,
@@ -15061,6 +15081,7 @@ BranchList,
     Chilled Water Loop Supply Branch 1,  !- Branch 2 Name
     Chilled Water Loop Supply Branch 2,  !- Branch 3 Name
     Chilled Water Loop Supply Branch 3,  !- Branch 4 Name
+    Chilled Water Loop Supply Branch 4   !- Branch 6 Name
     Chilled Water Loop Supply Outlet Branch;  !- Branch 5 Name
 
 BranchList,
@@ -15099,6 +15120,7 @@ BranchList,
     Condenser Water Loop Demand Inlet Branch,  !- Branch 1 Name
     Condenser Water Loop Demand Branch 1,  !- Branch 2 Name
     Condenser Water Loop Demand Branch 2,  !- Branch 3 Name
+    Condenser Water Loop Demand Branch 3   !- Branch 6 Name
     Condenser Water Loop Demand Bypass Branch,  !- Branch 4 Name
     Condenser Water Loop Demand Outlet Branch;  !- Branch 5 Name
 
@@ -15163,6 +15185,8 @@ Connector:Splitter,
     Chilled Water Loop Supply Branch 1,  !- Outlet Branch 1 Name
     Chilled Water Loop Supply Branch 2,  !- Outlet Branch 2 Name
     Chilled Water Loop Supply Branch 3;  !- Outlet Branch 3 Name
+    Chilled Water Loop Supply Branch 4;  !- Outlet Branch 4 Name
+
 
 Connector:Splitter,
     Chilled Water Loop Demand Splitter,  !- Name
@@ -15196,6 +15220,7 @@ Connector:Splitter,
     Condenser Water Loop Demand Inlet Branch,  !- Inlet Branch Name
     Condenser Water Loop Demand Branch 1,  !- Outlet Branch 1 Name
     Condenser Water Loop Demand Branch 2,  !- Outlet Branch 2 Name
+    Condenser Water Loop Demand Branch 3,  !- Outlet Branch 4 Name
     Condenser Water Loop Demand Bypass Branch;  !- Outlet Branch 3 Name
 
 Connector:Splitter,
@@ -15255,6 +15280,7 @@ Connector:Mixer,
     Chilled Water Loop Supply Branch 1,  !- Inlet Branch 1 Name
     Chilled Water Loop Supply Branch 2,  !- Inlet Branch 2 Name
     Chilled Water Loop Supply Branch 3;  !- Inlet Branch 3 Name
+    Chilled Water Loop Supply Branch 4;  !- Outlet Branch 4 Name
 
 Connector:Mixer,
     Chilled Water Loop Demand Mixer,  !- Name
@@ -15288,6 +15314,7 @@ Connector:Mixer,
     Condenser Water Loop Demand Outlet Branch,  !- Outlet Branch Name
     Condenser Water Loop Demand Branch 1,  !- Inlet Branch 1 Name
     Condenser Water Loop Demand Branch 2,  !- Inlet Branch 2 Name
+    Condenser Water Loop Demand Branch 3,  !- Outlet Branch 4 Name
     Condenser Water Loop Demand Bypass Branch;  !- Inlet Branch 3 Name
 
 Connector:Mixer,
@@ -15945,6 +15972,35 @@ Chiller:Electric:EIR,
     ,                        !- Heat Recovery Outlet Node Name
     1;                       !- Sizing Factor
 
+Chiller:Electric:EIR,
+    Chiller Electric EIR 5,  !- Name
+    1371572,                 !- Reference Capacity {W}
+    7.4,                     !- Reference COP {W/W}
+    6.67,                    !- Reference Leaving Chilled Water Temperature {C}
+    23.89,                   !- Reference Entering Condenser Fluid Temperature {C}
+    0.0587,                  !- Reference Chilled Water Flow Rate {m3/s}
+    Autosize,                !- Reference Condenser Fluid Flow Rate {m3/s}
+    Curve Biquadratic 1,     !- Cooling Capacity Function of Temperature Curve Name
+    Curve Biquadratic 2,     !- Electric Input to Cooling Output Ratio Function of Temperature Curve Name
+    Curve Quadratic 1,       !- Electric Input to Cooling Output Ratio Function of Part Load Ratio Curve Name
+    0.1,                     !- Minimum Part Load Ratio
+    1,                       !- Maximum Part Load Ratio
+    1,                       !- Optimum Part Load Ratio
+    0.2,                     !- Minimum Unloading Ratio
+    Node 300,                !- Chilled Water Inlet Node Name
+    Node 301,                !- Chilled Water Outlet Node Name
+    Node 303,                !- Condenser Inlet Node Name
+    Node 304,                !- Condenser Outlet Node Name
+    WaterCooled,               !- Condenser Type
+    0,                       !- Condenser Fan Power Ratio {W/W}
+    1,                       !- Fraction of Compressor Electric Consumption Rejected by Condenser
+    2,                       !- Leaving Chilled Water Lower Temperature Limit {C}
+    NotModulated,            !- Chiller Flow Mode
+    ,                        !- Design Heat Recovery Water Flow Rate {m3/s}
+    ,                        !- Heat Recovery Inlet Node Name
+    ,                        !- Heat Recovery Outlet Node Name
+    1;                       !- Sizing Factor
+
 
 !-   ===========  ALL OBJECTS IN CLASS: COOLINGTOWER:SINGLESPEED ===========
 
@@ -16100,6 +16156,8 @@ PlantEquipmentList,
     Chiller Electric EIR 1,  !- Equipment 1 Name
     Chiller:Electric:EIR,    !- Equipment 2 Object Type
     Chiller Electric EIR;    !- Equipment 2 Name
+    Chiller:Electric:EIR,    !- Equipment 2 Object Type
+    Chiller Electric EIR 5;  !- Equipment 2 Name
 
 PlantEquipmentList,
     Chilled Water Loop 1 Cooling Equipment List,  !- Name
