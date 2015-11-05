@@ -1,4 +1,4 @@
-!-Generator IDFEditor 1.42
+!-Generator IDFEditor 1.44
 !-Option SortedOrder
 
 !-NOTE: All comments with '!-' are ignored by the IDFEditor and are generated automatically.
@@ -15081,7 +15081,7 @@ BranchList,
     Chilled Water Loop Supply Branch 1,  !- Branch 2 Name
     Chilled Water Loop Supply Branch 2,  !- Branch 3 Name
     Chilled Water Loop Supply Branch 3,  !- Branch 4 Name
-    Chilled Water Loop Supply Branch 4   !- Branch 6 Name
+    Chilled Water Loop Supply Branch 4,   !- Branch 6 Name
     Chilled Water Loop Supply Outlet Branch;  !- Branch 5 Name
 
 BranchList,
@@ -15120,7 +15120,7 @@ BranchList,
     Condenser Water Loop Demand Inlet Branch,  !- Branch 1 Name
     Condenser Water Loop Demand Branch 1,  !- Branch 2 Name
     Condenser Water Loop Demand Branch 2,  !- Branch 3 Name
-    Condenser Water Loop Demand Branch 3   !- Branch 6 Name
+    Condenser Water Loop Demand Branch 3,   !- Branch 6 Name
     Condenser Water Loop Demand Bypass Branch,  !- Branch 4 Name
     Condenser Water Loop Demand Outlet Branch;  !- Branch 5 Name
 
@@ -15184,7 +15184,7 @@ Connector:Splitter,
     Chilled Water Loop Supply Inlet Branch,  !- Inlet Branch Name
     Chilled Water Loop Supply Branch 1,  !- Outlet Branch 1 Name
     Chilled Water Loop Supply Branch 2,  !- Outlet Branch 2 Name
-    Chilled Water Loop Supply Branch 3;  !- Outlet Branch 3 Name
+    Chilled Water Loop Supply Branch 3,  !- Outlet Branch 3 Name
     Chilled Water Loop Supply Branch 4;  !- Outlet Branch 4 Name
 
 
@@ -15279,7 +15279,7 @@ Connector:Mixer,
     Chilled Water Loop Supply Outlet Branch,  !- Outlet Branch Name
     Chilled Water Loop Supply Branch 1,  !- Inlet Branch 1 Name
     Chilled Water Loop Supply Branch 2,  !- Inlet Branch 2 Name
-    Chilled Water Loop Supply Branch 3;  !- Inlet Branch 3 Name
+    Chilled Water Loop Supply Branch 3,  !- Inlet Branch 3 Name
     Chilled Water Loop Supply Branch 4;  !- Outlet Branch 4 Name
 
 Connector:Mixer,
@@ -16155,7 +16155,7 @@ PlantEquipmentList,
     Chiller:Electric:EIR,    !- Equipment 1 Object Type
     Chiller Electric EIR 1,  !- Equipment 1 Name
     Chiller:Electric:EIR,    !- Equipment 2 Object Type
-    Chiller Electric EIR;    !- Equipment 2 Name
+    Chiller Electric EIR,    !- Equipment 2 Name
     Chiller:Electric:EIR,    !- Equipment 2 Object Type
     Chiller Electric EIR 5;  !- Equipment 2 Name
 
