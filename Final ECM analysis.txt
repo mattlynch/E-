@@ -15939,12 +15939,13 @@ PlantLoop,
 
 PlantEquipmentList,
     Chilled Water Loop Cooling Equipment List,  !- Name
+    Chiller:Electric:EIR,    !- Equipment 2 Object Type
+    Chiller Electric EIR 5,  !- Equipment 2 Name
     Chiller:Electric:EIR,    !- Equipment 1 Object Type
     Chiller Electric EIR 1,  !- Equipment 1 Name
     Chiller:Electric:EIR,    !- Equipment 2 Object Type
-    Chiller Electric EIR,    !- Equipment 2 Name
-    Chiller:Electric:EIR,    !- Equipment 2 Object Type
-    Chiller Electric EIR 5;  !- Equipment 2 Name
+    Chiller Electric EIR;    !- Equipment 2 Name
+    
 
 PlantEquipmentList,
     Condenser Water Loop Cooling Equipment List,  !- Name
