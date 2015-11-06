@@ -13923,7 +13923,7 @@ Controller:WaterCoil,
     Reverse,                 !- Action
     Flow,                    !- Actuator Variable
     Node 92,                 !- Sensor Node Name
-    Node 125,                !- Actuator Node Name
+    Node 310,                !- Actuator Node Name
     Autosize,                !- Controller Convergence Tolerance {deltaC}
     Autosize,                !- Maximum Actuated Flow {m3/s}
     0;                       !- Minimum Actuated Flow {m3/s}
