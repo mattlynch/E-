@@ -14428,16 +14428,6 @@ Branch,
     Passive;                 !- Component 1 Branch Control Type
 
 Branch,
-    Chilled Water Loop Demand Branch 2,  !- Name
-    ,                        !- Maximum Flow Rate {m3/s}
-    ,                        !- Pressure Drop Curve Name
-    Pipe:Adiabatic,          !- Component 1 Object Type
-    Pipe Adiabatic 8,        !- Component 1 Name
-    Node 61,                 !- Component 1 Inlet Node Name
-    Node 62,                 !- Component 1 Outlet Node Name
-    Passive;                 !- Component 1 Branch Control Type
-
-Branch,
     Chilled Water Loop Demand Bypass Branch,  !- Name
     ,                        !- Maximum Flow Rate {m3/s}
     ,                        !- Pressure Drop Curve Name
@@ -14996,7 +14986,6 @@ BranchList,
     Chilled Water Loop Demand Branches,  !- Name
     Chilled Water Loop Demand Inlet Branch,  !- Branch 1 Name
     Chilled Water Loop Demand Branch 1,  !- Branch 2 Name
-    Chilled Water Loop Demand Branch 2,  !- Branch 3 Name
     Chilled Water Loop Demand Branch 3,  !- Branch 6 Name
     Chilled Water Loop Demand Bypass Branch,  !- Branch 4 Name
     Chilled Water Loop Demand Outlet Branch;  !- Branch 5 Name
@@ -15089,7 +15078,6 @@ Connector:Splitter,
     Chilled Water Loop Demand Splitter,  !- Name
     Chilled Water Loop Demand Inlet Branch,  !- Inlet Branch Name
     Chilled Water Loop Demand Branch 1,  !- Outlet Branch 1 Name
-    Chilled Water Loop Demand Branch 2,  !- Outlet Branch 2 Name
     Chilled Water Loop Demand Branch 3,  !- Outlet Branch 4 Name
     Chilled Water Loop Demand Bypass Branch;  !- Outlet Branch 3 Name
 
@@ -15174,7 +15162,6 @@ Connector:Mixer,
     Chilled Water Loop Demand Mixer,  !- Name
     Chilled Water Loop Demand Outlet Branch,  !- Outlet Branch Name
     Chilled Water Loop Demand Branch 1,  !- Inlet Branch 1 Name
-    Chilled Water Loop Demand Branch 2,  !- Inlet Branch 2 Name
     Chilled Water Loop Demand Branch 3,  !- Inlet Branch 4 Name
     Chilled Water Loop Demand Bypass Branch;  !- Inlet Branch 3 Name
 
@@ -15485,11 +15472,6 @@ Pipe:Adiabatic,
     Pipe Adiabatic 9,        !- Name
     Node 51,                 !- Inlet Node Name
     Node 65;                 !- Outlet Node Name
-
-Pipe:Adiabatic,
-    Pipe Adiabatic 8,        !- Name
-    Node 61,                 !- Inlet Node Name
-    Node 62;                 !- Outlet Node Name
 
 Pipe:Adiabatic,
     Chilled Water Loop Demand Bypass Pipe,  !- Name
