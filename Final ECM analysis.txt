@@ -5589,7 +5589,8 @@ BuildingSurface:Detailed,
     Thermal Zone 14,         !- Zone Name
     Surface,                 !- Outside Boundary Condition
     Surface 105,             !- Outside Boundary Condition Object
-    NoSun,                   !- Sun Exposure
+    NoSun,                   !- Sun 
+Exposure
     NoWind,                  !- Wind Exposure
     ,                        !- View Factor to Ground
     ,                        !- Number of Vertices
@@ -10686,7 +10687,8 @@ FenestrationSurface:Detailed,
     Sub Surface 9,           !- Name
     Window,                  !- Surface Type
     ASHRAE 189.1-2009 ExtWindow ClimateZone 4-5,  !- Construction Name
-    Surface 114,             !- Building Surface Name
+    Surface 114,             !- Building Surface Nam
+e
     ,                        !- Outside Boundary Condition Object
     ,                        !- View Factor to Ground
     ,                        !- Shading Control Name
@@ -15566,7 +15568,8 @@ Pipe:Adiabatic,
 Pipe:Adiabatic,
     Pipe Adiabatic 5,        !- Name
     Node 47,                 !- Inlet Node Name
-    Node 33;                 !- Outlet Node Name
+    Node 33;                 !- O
+utlet Node Name
 
 Pipe:Adiabatic,
     Pipe Adiabatic 3,        !- Name
@@ -15648,7 +15651,7 @@ Pump:ConstantSpeed,
     0,                       !- Fraction of Motor Inefficiencies to Fluid Stream
     Intermittent;            !- Pump Control Type
 
-Pump:ConstantSpeed,
+Pump:VariableSpeed,
     Pump Variable Speed 3,   !- Name
     Node 67,                 !- Inlet Node Name
     Node 77,                 !- Outlet Node Name
@@ -18045,4 +18048,3 @@ Output:Meter,
 
 Output:SQLite,
     SimpleAndTabular;        !- Option Type
-
